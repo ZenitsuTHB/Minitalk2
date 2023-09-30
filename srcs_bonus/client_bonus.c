@@ -6,7 +6,7 @@
 /*   By: avolcy <avolcy@student.42barcelon>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 23:36:57 by avolcy            #+#    #+#             */
-/*   Updated: 2023/09/29 23:53:00 by avolcy           ###   ########.fr       */
+/*   Updated: 2023/09/30 21:34:45 by avolcy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ static void	ft_ack_transmission(int signal, siginfo_t *info, void *context)
 /**********************MAIN**************************/
 int	main(int ac, char **av)
 {
-	pid_t	sv_pid;
+	pid_t				sv_pid;
 	struct sigaction	newsig;
 
 	ft_error_arg(ac, av);

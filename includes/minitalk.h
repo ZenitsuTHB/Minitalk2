@@ -6,7 +6,7 @@
 /*   By: avolcy <avolcy@student.42barcelon>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 18:30:49 by avolcy            #+#    #+#             */
-/*   Updated: 2023/09/29 17:28:03 by avolcy           ###   ########.fr       */
+/*   Updated: 2023/09/30 21:33:35 by avolcy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 # define MINITALK_H
 
 /*************INCLUDES******************/
-#include <stdio.h>
-#include <signal.h>
-#include <unistd.h>
-#include "../libft/libft.h"
+# include <stdio.h>
+# include <signal.h>
+# include <unistd.h>
+# include "../libft/libft.h"
 /**************************************/
 
 /***********COLORS*****************/
@@ -39,19 +39,18 @@ typedef struct s_data
 	char	*string;
 	int		current_bit;
 }t_data;
-//........GLOBAL_VAR..........//
-	t_data	g_data;
+/*=============| GLOBAL_VAR |===============*/
+t_data	g_data;
 /*******************************************/
 
-
 /*************************ERROR_MESSAGES********************************/
-#define INVALID_PID_ERR "Invalid PID !\n"
-#define PID_EXAMPLE "PID example : 1xxx1"
-#define ERR_SENDING_MSG "Message sending failed !\n"
-#define MAN_SIGNAL "Read man 'signal.h' for more.\n"
-#define INVALID_ARG_ERR "Invalid number of arguments !\n"
-#define URS1_FAIL "Failed to setup the signal handler for SIGUSR1 !\n"
-#define USR2_FAIL "Failed to setup the signal handler for SIGUSR2 !\n"
-#define USAGE_MESSAGE "Usage : ./client <server PID> <string to send>\n"
+# define INVALID_PID_ERR "Invalid PID !\n"
+# define PID_EXAMPLE "PID example : 1xxx1"
+# define ERR_SENDING_MSG "Message sending failed !\n"
+# define MAN_SIGNAL "Read man 'signal.h' for more.\n"
+# define INVALID_ARG_ERR "Invalid number of arguments !\n"
+# define URS1_FAIL "Failed to setup the signal handler for SIGUSR1 !\n"
+# define USR2_FAIL "Failed to setup the signal handler for SIGUSR2 !\n"
+# define USAGE_MESSAGE "Usage : ./client <server PID> <string to send>\n"
 /***********************************************************************/
 #endif
