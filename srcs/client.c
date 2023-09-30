@@ -6,11 +6,12 @@
 /*   By: avolcy <avolcy@student.42barcelon>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 18:27:47 by avolcy            #+#    #+#             */
-/*   Updated: 2023/09/29 14:06:09 by avolcy           ###   ########.fr       */
+/*   Updated: 2023/09/30 22:05:32 by avolcy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/minitalk.h"
+#include "../libft/libft.h"
 
 /*==============Explaination================*/
 /*	Only 2 arguments 						*/

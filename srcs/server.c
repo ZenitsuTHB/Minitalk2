@@ -6,7 +6,7 @@
 /*   By: avolcy <avolcy@student.42barcelon>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 18:28:00 by avolcy            #+#    #+#             */
-/*   Updated: 2023/09/29 13:52:32 by avolcy           ###   ########.fr       */
+/*   Updated: 2023/09/30 22:03:01 by avolcy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@
 /*============================================================================*/
 t_data	g_data;
 
+/*=================| DATA_LENGTH_FUNCTION |============================*/
 static void	ft_rebuild_string_len(int signal)
 {
 	if (signal == SIGUSR2)
@@ -44,7 +45,9 @@ static void	ft_rebuild_string_len(int signal)
 	}
 	(g_data.current_bit)++;
 }
+/********************************************************************/
 
+/*============| DATA_DISPLAYED_FUNCTION |=================*/
 static void	ft_print_and_reset(void)
 {
 	int	j;
@@ -68,7 +71,9 @@ static void	ft_print_and_reset(void)
 	g_data.flag = 0;
 	return ;
 }
+/*******************************************************/
 
+/*================| CHAR_REBUILT_FUNCTION |=====================*/
 static void	ft_rebuild_char(int signal)
 {
 	if (signal == SIGUSR2)
@@ -85,7 +90,9 @@ static void	ft_rebuild_char(int signal)
 	}
 	(g_data.current_bit)++;
 }
+/*************************************************************/
 
+/*=============| SIGNAL_HANDLER_FUNCTION |==========================*/
 void	ft_handle_sigusr(int signal, siginfo_t *info, void *context)
 {
 	pid_t	client_pid;
@@ -98,7 +105,9 @@ void	ft_handle_sigusr(int signal, siginfo_t *info, void *context)
 	else
 		ft_rebuild_char(signal);
 }
+/*******************************************************************/
 
+/*=============| MAIN |=======================*/
 int	main(void)
 {
 	int					tmp;
@@ -127,3 +136,4 @@ int	main(void)
 		}
 	}
 }
+/***********************************************/
